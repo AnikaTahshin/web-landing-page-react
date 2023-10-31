@@ -21,6 +21,7 @@ const Home = () => {
 
   return (
     <>
+      {/* banner section starts */}
       <section className="hero">
         <div className="leftText">
           <p className="p1">100% QUALITY, 100% SATISFACTION</p>
@@ -36,35 +37,72 @@ const Home = () => {
           <img src="../../assets/images/dslr.png" alt="" />
         </div>
       </section>
+
+      {/* banner section ends */}
+
+      {/* products data show starts  */}
       <section className="trending">
         <h1 className="secTitle">Shop by Category</h1>
         <p className="secP">
           Life is hard enough already. Let us make it a little easier.
         </p>
-        {/* <Swiper
-          spaceBetween={50}
-          slidesPerView={3}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
-          <SwiperSlide>
-            <img src="../../../assets/images/laptop.png" alt="" />
-          </SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          ...
-        </Swiper> */}
-
-        {/* {trending &&
-          trending.map((item, index) => (
-            <div key={index}>
-              <Trending item={item} name={item.title} image={item.images} />
-            </div>
-          ))} */}
-
         <Trending data={trending} />
       </section>
+      {/* products data show starts  */}
+
+      {/* explore more section starts  */}
+
+      <section className="explore">
+        <div className="card-section">
+          <div className="logo-card">
+            <img
+              src="../../../assets/images/apple.png"
+              width={152}
+              height={152}
+            />
+          </div>
+          <div className="logo-card">
+            <img
+              src="../../../assets/images/bmw.png"
+              width={152}
+              height={152}
+            />
+          </div>
+          <div className="logo-card">
+            <img
+              src="../../../assets/images/nike.png"
+              width={152}
+              height={152}
+            />
+          </div>
+          <div className="logo-card">
+            <img
+              src="../../../assets/images/fila.png"
+              width={152}
+              height={152}
+            />
+          </div>
+          <div className="logo-card">
+            <img src="../../../assets/images/mi.png" width={152} height={152} />
+          </div>
+          <div className="logo-card">
+            <img
+              src="../../../assets/images/adidas.png"
+              width={152}
+              height={152}
+            />
+          </div>
+        </div>
+        <div className="description">
+          <h2>Explore Most Popular Brands</h2>
+          <p>Life is hard enough already. Let us make it a little easier.</p>
+        </div>
+      </section>
+
+      {/* explore more section ends  */}
+
+      {/* carousel start  */}
+      {/* carousel ends  */}
     </>
   );
 };

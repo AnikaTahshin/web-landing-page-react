@@ -38,6 +38,6 @@
 }
 @media only screen and (max-width: 600px) {
   .category {
-    flex-direction: column;
+    grid-template-columns: auto;
   }
 }

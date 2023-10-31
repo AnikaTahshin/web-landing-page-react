@@ -8,9 +8,7 @@ $large: 64px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding: 80px;
+  padding: 158px 160px 80px 93px;
 }
 
 .leftText {
@@ -85,6 +83,33 @@ $large: 64px;
 
   align-items: center;
 }
+.explore {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 158px 160px 80px 93px;
+}
+.logo-card {
+  width: 182px;
+  height: 182px;
+  border-radius: 25px;
+  border: 1px solid #ededed;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+
+  box-shadow: 5px 13px 18px -5px rgba(128, 128, 128, 0.1);
+}
+
+.card-section {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
+}
 
 @media only screen and (max-width: 600px) {
   .hero {
@@ -104,5 +129,18 @@ $large: 64px;
     border-radius: 200px;
     border: 15px solid rgba(32, 98, 255, 0.4);
     margin-top: 20px;
+  }
+  .explore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
