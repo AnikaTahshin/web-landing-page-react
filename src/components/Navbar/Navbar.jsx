@@ -40,18 +40,21 @@ const Navbar = () => {
         </li>
 
         <li>
-          <Link style={{ color: "#fff", textDecoration: "none" }} to="/contact">
+          <HashLink
+            style={{ color: "#fff", textDecoration: "none" }}
+            to="#contact"
+          >
             Contact
-          </Link>
+          </HashLink>
         </li>
 
         <li>
-          <Link
+          <HashLink
             style={{ color: "#fff", textDecoration: "none" }}
-            to="/services"
+            to="#services"
           >
             Services
-          </Link>
+          </HashLink>
         </li>
         <li>
           <HashLink

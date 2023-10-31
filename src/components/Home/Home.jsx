@@ -5,6 +5,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 // import Carousel from "react-elastic-carousel";
 import Trending from "../Trending";
+import { GrLocation } from "react-icons/gr";
+import { BsTelephone } from "react-icons/bs";
+import { AiOutlineMail } from "react-icons/ai";
 
 const baseURL = "https://dummyjson.com/products";
 const Home = () => {
@@ -122,6 +125,7 @@ const Home = () => {
 
       {/* carousel ends  */}
 
+      {/* sell section starts  */}
       <section className="sell">
         <div>
           <h2>Sell Easily on Socialmedia</h2>
@@ -136,6 +140,9 @@ const Home = () => {
           />
         </div>
       </section>
+      {/* sell section ends  */}
+
+      {/* about starts  */}
 
       <section id="about" className="about">
         <div>
@@ -188,6 +195,124 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* about ends  */}
+
+      {/* service section starts  */}
+
+      <section id="services" className="service">
+        <h1 className="secTitle">Services</h1>
+
+        <div className="service-row">
+          <div className="service-div">
+            <div>
+              <img src="../../assets/images/about.png" alt="" />
+            </div>
+            <div className="service-des">
+              <p>About Us</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorum sed repellat vero temporibus illo. Aperiam alias dolorum
+                vel nam recusandae a temporibus officiis reprehenderit eaque?
+                Amet quos reiciendis nisi exercitationem.
+              </p>
+            </div>
+          </div>
+          <div className="service-div">
+            <div>
+              <img src="../../assets/images/about.png" alt="" />
+            </div>
+            <div className="service-des">
+              <p>About Us</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorum sed repellat vero temporibus illo. Aperiam alias dolorum
+                vel nam recusandae a temporibus officiis reprehenderit eaque?
+                Amet quos reiciendis nisi exercitationem.
+              </p>
+            </div>
+          </div>
+          <div className="service-div">
+            <div>
+              <img src="../../assets/images/about.png" alt="" />
+            </div>
+            <div className="service-des">
+              <p>About Us</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorum sed repellat vero temporibus illo. Aperiam alias dolorum
+                vel nam recusandae a temporibus officiis reprehenderit eaque?
+                Amet quos reiciendis nisi exercitationem.
+              </p>
+            </div>
+          </div>
+          <div className="service-div">
+            <div>
+              <img src="../../assets/images/about.png" alt="" />
+            </div>
+            <div className="service-des">
+              <p>About Us</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorum sed repellat vero temporibus illo. Aperiam alias dolorum
+                vel nam recusandae a temporibus officiis reprehenderit eaque?
+                Amet quos reiciendis nisi exercitationem.
+              </p>
+            </div>
+          </div>
+          <div className="service-div">
+            <div>
+              <img src="../../assets/images/about.png" alt="" />
+            </div>
+            <div className="service-des">
+              <p>About Us</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorum sed repellat vero temporibus illo. Aperiam alias dolorum
+                vel nam recusandae a temporibus officiis reprehenderit eaque?
+                Amet quos reiciendis nisi exercitationem.
+              </p>
+            </div>
+          </div>
+          <div className="service-div">
+            <div>
+              <img src="../../assets/images/about.png" alt="" />
+            </div>
+            <div className="service-des">
+              <p>About Us</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorum sed repellat vero temporibus illo. Aperiam alias dolorum
+                vel nam recusandae a temporibus officiis reprehenderit eaque?
+                Amet quos reiciendis nisi exercitationem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* service section ends  */}
+
+      {/* contact us starts */}
+
+      <section id="contact" className="contact">
+        <div className="contDiv">
+          <GrLocation size={45} />
+          <h3>Address</h3>
+          <p>lorem Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div className="contDiv">
+          <BsTelephone size={45} />
+          <h3>Address</h3>
+          <p>lorem Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div className="contDiv">
+          <AiOutlineMail size={45} />
+          <h3>Address</h3>
+          <p>lorem Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </section>
+      {/* contact us ends */}
     </>
   );
 };

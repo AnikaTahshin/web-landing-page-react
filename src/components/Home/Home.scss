@@ -148,6 +148,54 @@ $large: 64px;
 .abImg {
   padding: 158px 160px 80px 93px;
 }
+
+.service-row {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.service-div {
+  background-color: rgb(126, 87, 87);
+  border: 1px solid red;
+  border-radius: 40px;
+  margin: 30px;
+  max-height: 30rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.service-des {
+  text-align: center;
+  margin: 10px;
+}
+.secTitle {
+  text-align: center;
+  font-size: 30px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  padding: 100px 50px 40px 30px;
+}
+
+.contDiv {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  cursor: pointer;
+}
+.contDiv:hover {
+  transform: scaleY(1.5);
+}
+
 @media only screen and (max-width: 600px) {
   .hero {
     flex-direction: column;
@@ -195,5 +243,8 @@ $large: 64px;
     // justify-content: center;
     // align-items: center;
     flex-direction: column;
+  }
+  .service-row {
+    grid-template-columns: auto;
   }
 }
