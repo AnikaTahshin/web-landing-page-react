@@ -8,10 +8,19 @@ import Trending from "../Trending";
 import { GrLocation } from "react-icons/gr";
 import { BsTelephone } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const baseURL = "https://dummyjson.com/products";
 const Home = () => {
   const [trending, setTrending] = useState();
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
   const list = () => {
     axios(baseURL).then((response) => {
@@ -108,19 +117,7 @@ const Home = () => {
 
       {/* carousel start  */}
       {/* <Carousel> */}
-      {/* <div className="slides">
-        <div>
-          <img src="../../assets/images/camera.jpg" />
-        </div>
-        <p>Anika</p>
-        <p>description</p>
-      </div>
-      <div className="slides">
-        <img src="../../assets/images/camera.jpg" />
-      </div>
-      <div className="slides">
-        <img src="../../assets/images/camera.jpg" />
-      </div> */}
+
       {/* </Carousel> */}
 
       {/* carousel ends  */}
@@ -313,6 +310,40 @@ const Home = () => {
         </div>
       </section>
       {/* contact us ends */}
+      <section className="carousel-container">
+        <Slider {...settings}>
+          <div className="testimonial">
+            <div className="newCard">
+              <img src="../../assets/images/av1.jpg" alt="" />
+              <p>Jhon Doe</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, dicta!
+              </p>
+            </div>
+          </div>
+          <div className="testimonial">
+            <div className="newCard">
+              <img src="../../assets/images/av2.jpg" alt="" />
+              <p>Jhon Doe</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, dicta!
+              </p>
+            </div>
+          </div>
+          <div className="testimonial">
+            <div className="newCard">
+              <img src="../../assets/images/av3.jpg" alt="" />
+              <p>Jhon Doe</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, dicta!
+              </p>
+            </div>
+          </div>
+        </Slider>
+      </section>
     </>
   );
 };
