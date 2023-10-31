@@ -111,6 +111,43 @@ $large: 64px;
   grid-template-columns: auto auto auto;
 }
 
+.slides {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 5px 13px 18px -5px rgba(128, 128, 128, 0.1);
+}
+.sell {
+  padding: 158px 160px 80px 93px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sellimg {
+  border-radius: 20px;
+  // object-fit: cover;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: powderblue;
+}
+.about-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.abImg {
+  padding: 158px 160px 80px 93px;
+}
 @media only screen and (max-width: 600px) {
   .hero {
     flex-direction: column;
@@ -142,5 +179,21 @@ $large: 64px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .sell {
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 160px 80px 93px;
+  }
+  .sellimg {
+    width: 250px;
+    height: 300px;
+  }
+
+  .about-row {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    flex-direction: column;
   }
 }

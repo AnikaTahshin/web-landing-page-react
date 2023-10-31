@@ -3,8 +3,9 @@ import "./Home.scss";
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
-
+// import Carousel from "react-elastic-carousel";
 import Trending from "../Trending";
+
 const baseURL = "https://dummyjson.com/products";
 const Home = () => {
   const [trending, setTrending] = useState();
@@ -12,6 +13,7 @@ const Home = () => {
   const list = () => {
     axios(baseURL).then((response) => {
       // const item = response.data.products.slice(0, 5);
+      console.log(response.data.products);
       setTrending(response.data.products);
     });
   };
@@ -41,7 +43,7 @@ const Home = () => {
       {/* banner section ends */}
 
       {/* products data show starts  */}
-      <section className="trending">
+      <section id="products" className="trending">
         <h1 className="secTitle">Shop by Category</h1>
         <p className="secP">
           Life is hard enough already. Let us make it a little easier.
@@ -52,7 +54,7 @@ const Home = () => {
 
       {/* explore more section starts  */}
 
-      <section className="explore">
+      <section id="explore" className="explore">
         <div className="card-section">
           <div className="logo-card">
             <img
@@ -102,7 +104,90 @@ const Home = () => {
       {/* explore more section ends  */}
 
       {/* carousel start  */}
+      {/* <Carousel> */}
+      {/* <div className="slides">
+        <div>
+          <img src="../../assets/images/camera.jpg" />
+        </div>
+        <p>Anika</p>
+        <p>description</p>
+      </div>
+      <div className="slides">
+        <img src="../../assets/images/camera.jpg" />
+      </div>
+      <div className="slides">
+        <img src="../../assets/images/camera.jpg" />
+      </div> */}
+      {/* </Carousel> */}
+
       {/* carousel ends  */}
+
+      <section className="sell">
+        <div>
+          <h2>Sell Easily on Socialmedia</h2>
+          <p>Life is hard enough already. Let us make it a little easier.</p>
+        </div>
+        <div className="imgDiv">
+          <img
+            src="../../../assets/images/sell.jpg"
+            height={452}
+            width={352}
+            className="sellimg"
+          />
+        </div>
+      </section>
+
+      <section id="about" className="about">
+        <div>
+          <h1 className="secTitle">About Us</h1>
+        </div>
+
+        <div className="about-row">
+          <div className="abImg">
+            <div>
+              <img src="../../assets/images/about.png" alt="" />
+            </div>
+            <div>
+              <p>About Us</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorum sed repellat vero temporibus illo. Aperiam alias dolorum
+                vel nam recusandae a temporibus officiis reprehenderit eaque?
+                Amet quos reiciendis nisi exercitationem.
+              </p>
+            </div>
+          </div>
+
+          <div className="abImg">
+            <div>
+              <img src="../../assets/images/about.png" alt="" />
+            </div>
+            <div>
+              <p>About Us</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorum sed repellat vero temporibus illo. Aperiam alias dolorum
+                vel nam recusandae a temporibus officiis reprehenderit eaque?
+                Amet quos reiciendis nisi exercitationem.
+              </p>
+            </div>
+          </div>
+          <div className="abImg">
+            <div>
+              <img src="../../assets/images/about.png" alt="" />
+            </div>
+            <div>
+              <p>About Us</p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorum sed repellat vero temporibus illo. Aperiam alias dolorum
+                vel nam recusandae a temporibus officiis reprehenderit eaque?
+                Amet quos reiciendis nisi exercitationem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

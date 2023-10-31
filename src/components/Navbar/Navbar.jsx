@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import {
   AiOutlineSearch,
   // AiOutlineUser,
@@ -22,9 +23,20 @@ const Navbar = () => {
       </div>
       <ul className="nav-links">
         <li>
-          <Link style={{ color: "#fff", textDecoration: "none" }} to="/about">
+          <HashLink
+            style={{ color: "#fff", textDecoration: "none" }}
+            to="#about"
+          >
             About
-          </Link>
+          </HashLink>
+        </li>
+        <li>
+          <HashLink
+            style={{ color: "#fff", textDecoration: "none" }}
+            to="#products"
+          >
+            Products
+          </HashLink>
         </li>
 
         <li>
@@ -42,9 +54,12 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link style={{ color: "#fff", textDecoration: "none" }} to="/profile">
-            Profile
-          </Link>
+          <HashLink
+            style={{ color: "#fff", textDecoration: "none" }}
+            to="#explore"
+          >
+            Explore
+          </HashLink>
         </li>
       </ul>
     </nav>
