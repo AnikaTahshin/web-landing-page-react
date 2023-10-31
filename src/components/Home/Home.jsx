@@ -1,18 +1,23 @@
 import "./Home.scss";
 
-// import axios from "axios";
-// import { useState } from 'react';
-// import { useEffect } from 'react';
-// const baseURL = "https://dummyjson.com/products";
-const Home = () => {
-  // const [trending, setTrending] = useState();
+import axios from "axios";
+import { useState } from "react";
+import { useEffect } from "react";
 
-  // const list = () => {
-  //   axios(baseURL).then((response) => setTrending(response.data.products));
-  // };
-  // useEffect(() => {
-  //   list();
-  // }, []);
+import Trending from "../Trending";
+const baseURL = "https://dummyjson.com/products";
+const Home = () => {
+  const [trending, setTrending] = useState();
+
+  const list = () => {
+    axios(baseURL).then((response) => {
+      // const item = response.data.products.slice(0, 5);
+      setTrending(response.data.products);
+    });
+  };
+  useEffect(() => {
+    list();
+  }, []);
 
   return (
     <>
@@ -32,12 +37,33 @@ const Home = () => {
         </div>
       </section>
       <section className="trending">
-        <h1 className="secTitle">Shop Our Trending Products</h1>
+        <h1 className="secTitle">Shop by Category</h1>
         <p className="secP">
           Life is hard enough already. Let us make it a little easier.
         </p>
+        {/* <Swiper
+          spaceBetween={50}
+          slidesPerView={3}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          <SwiperSlide>
+            <img src="../../../assets/images/laptop.png" alt="" />
+          </SwiperSlide>
+          <SwiperSlide>Slide 2</SwiperSlide>
+          <SwiperSlide>Slide 3</SwiperSlide>
+          <SwiperSlide>Slide 4</SwiperSlide>
+          ...
+        </Swiper> */}
 
-        {/* <Trending data={trending} /> */}
+        {/* {trending &&
+          trending.map((item, index) => (
+            <div key={index}>
+              <Trending item={item} name={item.title} image={item.images} />
+            </div>
+          ))} */}
+
+        <Trending data={trending} />
       </section>
     </>
   );

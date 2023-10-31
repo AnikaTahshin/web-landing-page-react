@@ -52,6 +52,20 @@ $large: 64px;
   border-radius: 200px;
   border: 20px solid rgba(32, 98, 255, 0.4);
 }
+.tiles {
+  width: 250px;
+  height: 160px;
+  border: 1px solid #ededed;
+  display: flex;
+  flex-direction: row;
+
+  background: linear-gradient(234deg, #c0d4fe 16.99%, #ecf1fd 91.97%);
+
+  box-shadow: 5px 13px 18px -5px rgba(128, 128, 128, 0.1);
+}
+.tiles p {
+  text-align: center;
+}
 
 .trending {
   display: flex;
@@ -63,6 +77,13 @@ $large: 64px;
 .trending p {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.buttonSec {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
 }
 
 @media only screen and (max-width: 600px) {

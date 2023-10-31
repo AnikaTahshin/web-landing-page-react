@@ -1,15 +1,30 @@
-import React from "react";
 import "./Trending.scss";
+
 const Trending = (props) => {
-  const item = props.data.slice(0, 5);
+  const item = props?.data;
 
   return (
     <>
-      <div className="titles">
-        {/* <p>title</p> */}
+      <div className="category">
         {item &&
           item.map((element) => {
-            return <p>{element?.title}</p>;
+            return (
+              <>
+                <div className="item">
+                  <div className="image">
+                    <img
+                      src={element.thumbnail}
+                      height={100}
+                      width={100}
+                      className="img"
+                    />
+                  </div>
+
+                  <p>{element.title}</p>
+                  <p>BDT. {element.price}</p>
+                </div>
+              </>
+            );
           })}
       </div>
     </>
